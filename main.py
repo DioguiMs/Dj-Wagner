@@ -75,7 +75,7 @@ async def main(token):
     await client.start(token)
 
 if __name__ == '__main__':
-    token = os.environ.get('bot_token', None)
+    token = os.getenv('bot_token', None)
     if token is None:
         print('Token was not found in the System Environmental Variables')
         quit()
